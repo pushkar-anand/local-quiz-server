@@ -1,0 +1,14 @@
+{
+    "name": "root/local-quiz-server",
+    "type": "project",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Pushkar Anand",
+            "email": "anandpushkar088@gmail.com"
+        }
+    ],
+    "require": {
+        "matthiasmullie/minify": "^1.3"
+    }
+}
