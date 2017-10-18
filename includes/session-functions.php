@@ -1,8 +1,9 @@
 <?php
 function secure_session($name)
 {
+  error_log("IN secure_session function");
     $session_name = $name;   // Set a custom session name
-    $secure = SECURE;
+    $secure = false; //set it to true for https connections
     // This stops JavaScript being able to access the session id.
     $httponly = true;
     // Forces sessions to only use cookies.
@@ -12,13 +13,15 @@ function secure_session($name)
         exit();
     }
     // Gets current cookies params.
-    $cookieParams = session_get_cookie_params();
-    session_set_cookie_params($cookieParams["lifetime"],
-                                $cookieParams["path"],
-                                $cookieParams["domain"],
-                                $secure,
-                                $httponly
-      );
+    $currentCookieParams = session_get_cookie_params();
+
+    /*session_set_cookie_params(
+        $currentCookieParams["lifetime"],
+        $currentCookieParams["path"],
+        $currentCookieParams["domain"],
+        $secure,
+        $httponly
+    );*/
     // Sets the session name to the one set above.
     session_name($session_name);
     session_start();            // Start the PHP session

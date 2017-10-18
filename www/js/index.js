@@ -8,8 +8,8 @@ $(".sign-up").on('click', function() {
   $("form").toggleClass("hidden");
 })
 
-$("button").on('click', function() {
+/*$("button").on('click', function() {
   $(this).addClass("fab");
   $("form").addClass("hidden");
   $(".text").remove();
-})
+})*/
