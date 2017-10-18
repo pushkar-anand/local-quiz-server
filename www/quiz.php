@@ -15,12 +15,12 @@ if (isset($_GET['user']))
   }
   else
   {
-    header("HTTP/1.0 400 Bad Request");
+    header($_SERVER["SERVER_PROTOCOL"]." 400 Bad Request");
   }
 }
 else
 {
-  header("HTTP/1.0 400 Bad Request");
+  header($_SERVER["SERVER_PROTOCOL"]." 400 Bad Request");
 }
 
 ?>
