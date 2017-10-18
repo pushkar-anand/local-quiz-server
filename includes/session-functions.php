@@ -27,4 +27,8 @@ function secure_session($name)
     session_start();            // Start the PHP session
     session_regenerate_id();    // regenerated the session, delete the old one.
 }
+function destroy_secure_session()
+{
+  session_destroy();
+}
 ?>
